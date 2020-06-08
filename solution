@@ -1,0 +1,24 @@
+def in_array(array1, array2):
+    res = []
+    for a1 in array1:
+        for a2 in array2:
+            if a1 in a2 and a1 not in res:
+                res.append(a1)
+    return sorted(res)
+
+print(in_array(["live", "arp", "strong"], ["lively", "alive", "harp", "sharp", "armstrong"]))
+
+
+or
+
+
+
+def in_array(a1, a2):
+    return sorted({w for w in a1 if w in "".join(a2)})
+    
+or
+
+
+def in_array(array1, array2):
+    array2='@'.join(array2)
+    return sorted(set([string for string in array1 if string in array2]))
